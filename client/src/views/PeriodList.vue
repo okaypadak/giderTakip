@@ -1,5 +1,7 @@
 <template>
-  <div class="p-6">
+ 
+  <div class="p-6 bg-gray-100">
+    <Navbar />
     <h1 class="text-2xl font-bold mb-4">Dönem Seç</h1>
 
     <!-- ✅ Yeni Dönem Ekle -->
@@ -30,6 +32,7 @@
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
+import Navbar from '../components/Navbar.vue'
 
 const newPeriod = ref('')
 const periods = ref([])

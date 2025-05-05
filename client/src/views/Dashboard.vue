@@ -1,5 +1,6 @@
 <template>
   <div class="p-6 bg-gray-100 min-h-screen">
+    <Navbar />
     <h1 class="text-3xl font-bold text-gray-800 mb-6">
       Gider Defteri Dashboard - {{ selectedPeriod }}
     </h1>
@@ -74,6 +75,7 @@ import { onMounted, ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import axios from 'axios'
 import AddModal from '../components/AddModal.vue'
+import Navbar from '../components/Navbar.vue'
 
 const route = useRoute()
 const selectedPeriod = ref(route.query.period || '') // 💡 period parametresi alınıyor

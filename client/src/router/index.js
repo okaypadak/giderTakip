@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../views/Login.vue'
 import Dashboard from '../views/Dashboard.vue'
 import PeriodList from '../views/PeriodList.vue'
+import CycleTracker from '../views/CycleTracker.vue'
 
 const routes = [
   { path: '/', name: 'Login', component: Login },
@@ -16,6 +17,12 @@ const routes = [
     path: '/dashboard', 
     name: 'Dashboard', 
     component: Dashboard, 
+    meta: { requiresAuth: true } 
+  },
+  { 
+    path: '/cycle', 
+    name: 'Cycle', 
+    component: CycleTracker, 
     meta: { requiresAuth: true } 
   }
 ]
